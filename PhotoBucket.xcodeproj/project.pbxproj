@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0AD1C0122085B1A000B6B860 /* PhotoBucket.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0FE2820859FDD0044E3FC /* PhotoBucket.xcdatamodeld */; };
 		0AE0FE2720859FDD0044E3FC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0FE2620859FDD0044E3FC /* AppDelegate.swift */; };
-		0AE0FE2A20859FDD0044E3FC /* PhotoBucket.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0FE2820859FDD0044E3FC /* PhotoBucket.xcdatamodeld */; };
-		0AE0FE2C20859FDD0044E3FC /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0FE2B20859FDD0044E3FC /* MasterViewController.swift */; };
-		0AE0FE2E20859FDD0044E3FC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0FE2D20859FDD0044E3FC /* DetailViewController.swift */; };
 		0AE0FE3120859FDD0044E3FC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE0FE2F20859FDD0044E3FC /* Main.storyboard */; };
 		0AE0FE3320859FDD0044E3FC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AE0FE3220859FDD0044E3FC /* Assets.xcassets */; };
 		0AE0FE3620859FDD0044E3FC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AE0FE3420859FDD0044E3FC /* LaunchScreen.storyboard */; };
+		0AE0FE3E2085AA9A0044E3FC /* WeatherTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0FE3D2085AA9A0044E3FC /* WeatherTableViewController.swift */; };
+		0AE0FE402085AAC40044E3FC /* WeatherDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE0FE3F2085AAC40044E3FC /* WeatherDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0AE0FE2320859FDD0044E3FC /* PhotoBucket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoBucket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AE0FE2620859FDD0044E3FC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AE0FE2920859FDD0044E3FC /* PhotoBucket.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PhotoBucket.xcdatamodel; sourceTree = "<group>"; };
-		0AE0FE2B20859FDD0044E3FC /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
-		0AE0FE2D20859FDD0044E3FC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		0AE0FE3020859FDD0044E3FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0AE0FE3220859FDD0044E3FC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AE0FE3520859FDD0044E3FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AE0FE3720859FDD0044E3FC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0AE0FE3D2085AA9A0044E3FC /* WeatherTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherTableViewController.swift; sourceTree = "<group>"; };
+		0AE0FE3F2085AAC40044E3FC /* WeatherDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,13 +59,13 @@
 			isa = PBXGroup;
 			children = (
 				0AE0FE2620859FDD0044E3FC /* AppDelegate.swift */,
-				0AE0FE2B20859FDD0044E3FC /* MasterViewController.swift */,
-				0AE0FE2D20859FDD0044E3FC /* DetailViewController.swift */,
 				0AE0FE2F20859FDD0044E3FC /* Main.storyboard */,
 				0AE0FE3220859FDD0044E3FC /* Assets.xcassets */,
 				0AE0FE3420859FDD0044E3FC /* LaunchScreen.storyboard */,
 				0AE0FE3720859FDD0044E3FC /* Info.plist */,
 				0AE0FE2820859FDD0044E3FC /* PhotoBucket.xcdatamodeld */,
+				0AE0FE3D2085AA9A0044E3FC /* WeatherTableViewController.swift */,
+				0AE0FE3F2085AAC40044E3FC /* WeatherDetailViewController.swift */,
 			);
 			path = PhotoBucket;
 			sourceTree = "<group>";
@@ -142,10 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0AE0FE2A20859FDD0044E3FC /* PhotoBucket.xcdatamodeld in Sources */,
+				0AD1C0122085B1A000B6B860 /* PhotoBucket.xcdatamodeld in Sources */,
+				0AE0FE3E2085AA9A0044E3FC /* WeatherTableViewController.swift in Sources */,
+				0AE0FE402085AAC40044E3FC /* WeatherDetailViewController.swift in Sources */,
 				0AE0FE2720859FDD0044E3FC /* AppDelegate.swift in Sources */,
-				0AE0FE2C20859FDD0044E3FC /* MasterViewController.swift in Sources */,
-				0AE0FE2E20859FDD0044E3FC /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
