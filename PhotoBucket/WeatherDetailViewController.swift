@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class WeatherDetailViewController: UIViewController {
 
@@ -14,6 +15,8 @@ class WeatherDetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var spinner: UIActivityIndicatorView!
     
+    var weatherRef: DocumentReference?
+    var weatherListener: ListenerRegistration!
     var weather: Weather?
     
     override func viewDidLoad() {
@@ -39,8 +42,7 @@ class WeatherDetailViewController: UIViewController {
                                                 let captionTextField = alertController.textFields![0]
                                                 print("captionTextField = \(captionTextField)")
                                                 self.weather?.caption = captionTextField.text!
-                                                self.updateView()
-                                                (UIApplication.shared.delegate as! AppDelegate).saveContext()
+                                                self.weatherRef?.setData(self.weather!.data)
                                                 
         }
         alertController.addAction(cancelAction)
@@ -50,7 +52,23 @@ class WeatherDetailViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.captionLabel.text = self.weather?.caption
+        weatherListener = weatherRef?.addSnapshotListener({ (documentSnapshot, error) in
+            if let error = error {
+                print("Error getting the document: \(error.localizedDescription)")
+                return
+            }
+            if !documentSnapshot!.exists {
+                print("This document got deleted by someone else.")
+                return
+            }
+            self.weather = Weather(documentSnapshot: documentSnapshot!)
+            self.updateView()
+        })
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        weatherListener.remove()
     }
     
     override func viewDidAppear(_ animated: Bool) {
